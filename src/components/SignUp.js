@@ -359,7 +359,7 @@ class SignUp extends Component {
                                         </Row>                                                                
                                 </div>
                                 <div className="title_sec p-t-30">
-                                    <h5 className="p-l-15"> <img className="m-l-10" src={require('../images/photo.svg')} /> Upload Picture <span className="txt_optional">(Optional)</span></h5>
+                                    <h5 className="p-l-15"> <img src={require('../images/photo.svg')} /> Upload Picture <span className="txt_optional">(Optional)</span></h5>
                                     <hr />
                                 </div>
                                 <div className="container bg_white">                                                                       

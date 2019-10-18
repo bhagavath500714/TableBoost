@@ -9,7 +9,13 @@
 .btn_back{border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
 .btn_next{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
 .form-control{font-size: 14px !important;}
-.button_link{width:200px;border:none !important;background-color: color(c_black) !important;color:color(c_white) !important;height: 35px;font-size: 12px !important;@include flex-center;position:relative;}
+.sub_title{font-family: 'Montserrat', sans-serif;}
+.txt_optional{font-size: 12px;font-weight: 100;color: rgba(0,0,0,0.88);}
+.button_link{width:200px;border:none !important;background-color: color(c_black) !important;color:color(c_white) !important;height: 35px;font-size: 12px !important;@include flex-center;position:relative;
+    a{color:color(c_white);
+        &:hover {color:color(c_white);} 
+    }
+}
 .upload_btn{
     .button_link{width:100%;
         input[type=file] {position: absolute;width:100%;height:35px;left: 0;top: 0;opacity: 0;cursor:pointer;}
