@@ -1,0 +1,75 @@
+
+@import '../src/css/Variable.scss';
+@import '../src/css/Utilities.scss';
+@import '../src/css/Mixin.scss';
+
+/*------Login sec ----------------*/
+.login_sec{
+    .login_bg{background-image: url(./images/l_bg.jpg);background-size: contain;width: 100%;height: 100vh;background-repeat: round;@include flex-center;
+        .welcome_txt{@include flex-center;flex-direction: column; width: 280px;text-align: center;
+        h1{color:color(c_white);}
+        p{color:color(c_gray);}
+        a{color:color(c_white);}
+    }
+    }
+    .login_wrapper{width: 100%;height: 100vh;@include flex-center;
+        .login_box{min-width:320px;
+            .forgot_txt{color:color(c_red);font-size:12px;display:flex;}
+            .login_btn{background-color:color(c_black);}
+        }
+    }
+}
+/*------Forgot Passwordsec ----------------*/
+.forgot_model{
+    .modal-header{border-bottom: none;
+        .close{position: absolute; right: 7px; top: 2px; margin: 0; padding: 0;}
+    }
+    .model_sec{@include flex-center;flex-direction: column;text-align: center;
+        p{color:color(c_black);opacity: .7;}
+        h5{font-weight: 700;color:color(c_red);cursor: pointer;}
+    }
+}
+/*------Headersec ----------------*/
+.heade_sec{height:82px;display: flex;align-items: center;background-color:color(c_white);
+  .logo_img{width:160px;}
+}
+/*------Signupsec ----------------*/
+.work_area{background-color: color(c_bg);
+  .steper_sec{
+    .steper_set{display: flex;flex-direction: column;align-items: flex-end;
+      .steper_title{width:740px;text-align: right;font-family: 'Montserrat', sans-serif;}
+      .count_base{
+        li{display:inline-flex;
+          .count_box{display: flex;flex-direction: column;align-items: center;position: relative;min-width: 120px;
+            .count{width: 30px;height: 30px;background-color:color(c_black);@include flex-center;border-radius: 50%;color:color(c_white);position: relative;font-size: 14px;cursor: pointer;
+              &:after{content: "";position: absolute;bottom: 9px;left: 30px;right: 0;height: 0.5em;border-top: 2px solid color(c_black);z-index: 1;width: 91px;
+              }
+            }
+            .last_count{
+              &:after{display:none;
+              }
+            }
+            .small_txt{font-size: 10px;}
+            .active{background-color:color(c_red);}
+          }
+        }
+      }
+    }
+  }
+  .core_sec{
+    .form_cover{border-radius: 3px;box-shadow: 0px 1px  4px rgba(0,0,0,0.1);background-color:color(c_white);
+      .title_sec{
+        h5{font-family: 'Montserrat', sans-serif;font-size: 18px;}
+      }
+      .btn_submit{background-color: color(c_red);border: none;}
+    }
+  }
+  .user_sec{
+    .send_invite{width: auto;height: 35px;display: inline-flex;align-items: center;
+      font-size: 12px;
+      font-weight: 100;background-color: color(c_black);}
+  }  
+  .ticket_sec{
+    .txt_optional{font-size: 12px;font-weight: 100;color: rgba(0,0,0,0.88);}
+  }  
+}

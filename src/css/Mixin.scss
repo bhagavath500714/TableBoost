@@ -1,0 +1,20 @@
+
+ /*----Mixin------------------*/
+ @mixin flex-center {display:flex;align-items: center;justify-content: center;}  
+
+.button_base{height:43px;min-width:150px;font-weight: 100 !important;}
+.btn_radius{border-radius: 21px !important;}
+.button_bordered{background: transparent !important;border:1px solid color(c_white) !important;}
+.btn_another{background-color: color(c_black) !important;border-radius: 0 !important;}
+.btn_back{border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
+.btn_next{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
+.form-control{font-size: 14px !important;}
+.button_link{width:200px;border:none !important;background-color: color(c_black) !important;color:color(c_white) !important;height: 35px;font-size: 12px !important;@include flex-center;position:relative;}
+.upload_btn{
+    .button_link{width:100%;
+        input[type=file] {position: absolute;width:100%;height:35px;left: 0;top: 0;opacity: 0;cursor:pointer;}
+    }    
+}
+.custom_check{
+    .form-check-input{width:17px;height:17px;}
+}

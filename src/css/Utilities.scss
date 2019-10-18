@@ -1,0 +1,77 @@
+/*------Montserrat Fonts ----------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap'); 
+
+/*------Open sans Fonts ----------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+*{margin:0;padding: 0;outline: none;}
+a:hover{text-decoration: none !important;}
+body{font-family: 'Open Sans', sans-serif !important;font-size:14px !important;}
+
+/*----Function------------------*/
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+  };
+  
+  /*----margin Top------------------*/
+  $class-slug: m-t;
+  @for $i from 0 through 100 {
+    .#{$class-slug}-#{$i}{
+      margin-top: 0px + $i !important
+    }
+  }
+  
+  /*----margin Bottom------------------*/
+  $class-slug: m-b;
+  @for $i from 0 through 100 {
+    .#{$class-slug}-#{$i}{
+      margin-bottom: 0px + $i !important
+    }
+  }
+  
+  /*----margin left------------------*/
+  $class-slug: m-l;
+  @for $i from 0 through 100 {
+    .#{$class-slug}-#{$i}{
+      margin-left: 0px + $i !important
+    }
+  }
+  
+  /*----margin Right------------------*/
+  $class-slug: m-r;
+  @for $i from 0 through 100 {
+    .#{$class-slug}-#{$i}{
+      margin-right: 0px + $i !important
+    }
+  }
+  /*----Padding Top------------------*/
+  $class-slug: p-t;
+  @for $i from 0 through 100 {
+    .#{$class-slug}-#{$i}{
+      padding-top: 0px + $i !important
+    }
+  }
+  
+  /*----Padding Bottom------------------*/
+  $class-slug: p-b;
+  @for $i from 1 through 100 {
+    .#{$class-slug}-#{$i}{
+      padding-bottom: 0px + $i !important
+    }
+  }
+  
+  /*----padding left------------------*/
+  $class-slug: p-l;
+  @for $i from 1 through 100 {
+    .#{$class-slug}-#{$i}{
+      padding-left: 0px + $i !important
+    }
+  }
+  
+  /*----paddingn Right------------------*/
+  $class-slug: p-r;
+  @for $i from 1 through 100 {
+    .#{$class-slug}-#{$i}{
+      padding-right: 0px + $i !important
+    }
+  }
