@@ -83,9 +83,105 @@ class AddAsset extends Component {
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Serial Number" />
                                                 </FormGroup>
                                             </Col>
+                                        </Row>
+                                    </div>
+                                    <div className="title_sec p-t-30">
+                                        <h5 className="p-l-15">Supplier Details <span className="txt_optional">(Optional)</span></h5>
+                                        <hr />
+                                    </div>
+                                    <div className="container bg_white">                                                                       
+                                        <Row>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Purchased Form</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Purchased Form" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Purchase Price</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Price" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Purchased Date</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Select Date" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Address</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Address" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={4}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">City</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Your City" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={4}>
+                                                    <FormGroup>
+                                                        <Label for="exampleSelect">State</Label>
+                                                            <Input type="select" name="select" id="exampleSelect">
+                                                            <option>Enter State</option>
+                                                            </Input>
+                                                        </FormGroup>
+                                            </Col>
+                                            <Col sm={4}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Zip</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Zip" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Email</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Email Address" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Phone" />
+                                                </FormGroup>
+                                            </Col>                                            
+                                        </Row>
+                                    </div>
+                                    <div className="title_sec p-t-30">
+                                        <h5 className="p-l-15">Vendor Details <span className="txt_optional">(Optional)</span></h5>
+                                        <hr />
+                                    </div>
+                                    <div className="container bg_white">                                                                       
+                                        <Row>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Name</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Vendor Name" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Website</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Vendor Website" />
+                                                </FormGroup>
+                                            </Col>                                            
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Address</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Address" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Phone" />
+                                                </FormGroup>
+                                            </Col>                                            
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">
-                                                    <Button className="button_base btn_radius btn_submit">NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
+                                                    <Button className="button_base btn_radius btn_add">ADD </Button>
                                                 </div>
                                             </Col>
                                         </Row>

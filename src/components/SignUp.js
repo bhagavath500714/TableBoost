@@ -224,7 +224,7 @@ class SignUp extends Component {
                                        </Col>
                                        <Col sm={12}>
                                         <div className="text-right">
-                                            <Button className="send_invite"> <img className="m-r-10" src={require('../images/invitation.svg')} /> SEND INVITATION </Button>
+                                            <Button className="send_invite"><Link to="/invite"> <img className="m-r-10" src={require('../images/invitation.svg')} /> SEND INVITATION </Link></Button>
                                         </div>
                                         </Col>
                                    <Col sm={12}>
@@ -320,7 +320,7 @@ class SignUp extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                                <Button className="button_link m-t-29"> <img className="m-r-10" src={require('../images/plus.svg')} /> ADD NEW VENDOR </Button>
+                                                <Button className="button_link m-t-29"> <img className="m-r-10" src={require('../images/plus.svg')} /> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
