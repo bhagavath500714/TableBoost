@@ -33,6 +33,9 @@ class SignUp extends Component {
                                     {this.state.viewSteper == '3' && 
                                         <h6 className="steper_title m-t-15">Create your first ticket by adding an asset (fryer, espresso machine…) and assigning that ticket to a crew member  or a vendor or supplier</h6>
                                     }
+                                    {this.state.viewSteper == '4' && 
+                                        <h6 className="steper_title m-t-15">Almost finished!</h6>
+                                    }                                    
                                     <ul className="count_base m-t-20">
                                         <li>
                                             <div className="count_box">
@@ -67,16 +70,16 @@ class SignUp extends Component {
                             <div className="core_sec p-b-30">
                             <div className="container form_cover p-0">                             
                                 <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">Your Business</h5>
+                                        <h5 className="p-l-15">Your Restaurant</h5>
                                         <hr />
                                     </div>
                                     <Form> 
                                         <div className="container bg_white">                                                                       
                                             <Row>
-                                                <Col sm={4}>
+                                                <Col sm={4} xs={12}>
                                                     <FormGroup >
                                                         <Label className="m-b-10" for="exampleEmail">Name</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Your Name" />
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Restaurant Name" />
                                                     </FormGroup>
                                                 </Col>
                                                 <Col sm={8}>
@@ -113,7 +116,7 @@ class SignUp extends Component {
                                                 </Col>
                                                 <Col sm={8}>
                                                     <FormGroup>
-                                                        <Label for="exampleSelect">Business Type</Label>
+                                                        <Label for="exampleSelect">Restaurant Type</Label>
                                                             <Input type="select" name="select" id="exampleSelect">
                                                             <option>Coffee Shop</option>
                                                             </Input>
@@ -178,8 +181,11 @@ class SignUp extends Component {
                    <div className="core_sec p-b-30">
                    <div className="container form_cover p-0">                             
                        <div className="title_sec p-t-30">
-                               <h5 className="p-l-15">User</h5>
-                               <hr />
+                       <div className="m-header_sec">
+                            <h5 className="p-l-15">Add User</h5>
+                                <a className="skip_txt p-r-15" href="javascript:void(0);"><img className="m-r-10" src={require('../images/skip_step.svg')} /> Skip this Step</a>
+                            </div>
+                        <hr />
                            </div>
                            <Form>                                                           
                            <div className="container bg_white">                                                                       
@@ -216,17 +222,11 @@ class SignUp extends Component {
                                                    </Input>
                                            </FormGroup>
                                        </Col>
-                                       <Col sm={6}>
-                                       <FormGroup >
-                                           <Label className="m-b-10" for="exampleEmail">Title</Label>
-                                           <Input type="email" name="email" id="exampleEmail" placeholder="Enter Title" />
-                                       </FormGroup>
-                                       </Col>
-                                       <Col sm={12}>
+                                       {/* <Col sm={12}>
                                         <div className="text-right">
                                             <Button className="send_invite"><Link to="/invite"> <img className="m-r-10" src={require('../images/invitation.svg')} /> SEND INVITATION </Link></Button>
                                         </div>
-                                        </Col>
+                                        </Col> */}
                                    <Col sm={12}>
                                        <div className="text-center m-t-40 m-b-40">
                                            <div>
@@ -250,8 +250,11 @@ class SignUp extends Component {
                         <div className="core_sec p-b-30">
                         <div className="container form_cover p-0">                             
                             <div className="title_sec p-t-30">
-                                    <h5 className="p-l-15">Ticket  Details</h5>
-                                    <hr />
+                                <div className="m-header_sec">
+                                <h5 className="p-l-15">Ticket  Details</h5>
+                                    <a className="skip_txt p-r-15" href="javascript:void(0);"><img className="m-r-10" src={require('../images/skip_step.svg')} /> Skip this Step</a>
+                                </div>
+                                <hr />
                                 </div>
                                 <Form> 
                                     <div className="container bg_white">                                                                       
@@ -295,7 +298,7 @@ class SignUp extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                                <Button className="button_link m-t-29"> <img className="m-r-10" src={require('../images/plus.svg')} /><Link to="/asset"> ADD NEW ASSET </Link></Button>
+                                                <Button className="button_link m-t-29 mobile-m"> <img className="m-r-10" src={require('../images/plus.svg')} /><Link to="/asset"> ADD NEW ASSET </Link></Button>
                                             </Col>
                                             <Col sm={12}>
                                             <FormGroup>
@@ -320,7 +323,7 @@ class SignUp extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                                <Button className="button_link m-t-29"> <img className="m-r-10" src={require('../images/plus.svg')} /> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
+                                                <Button className="button_link m-t-29 mobile-m"> <img className="m-r-10" src={require('../images/plus.svg')} /> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
@@ -331,7 +334,7 @@ class SignUp extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                            <FormGroup check className="custom_check m-t-35">
+                                            <FormGroup check className="custom_check m-t-35 mobile-m">
                                                 <Input type="checkbox" name="check" id="exampleCheck"/>
                                                 <Label for="exampleCheck" check>Recurring</Label>
                                             </FormGroup>
@@ -365,7 +368,7 @@ class SignUp extends Component {
                                 <div className="container bg_white">                                                                       
                                     <Row>
                                         <Col sm={3} className="upload_btn">
-                                            <Button className="button_link"> <img className="m-r-10" src={require('../images/plus.svg')} /> CHOOSE IMAGE 
+                                            <Button className="button_link mobile-b-10"> <img className="m-r-10" src={require('../images/plus.svg')} /> CHOOSE IMAGE 
                                                 <input type="file" />
                                             </Button> 
                                         </Col>
@@ -391,6 +394,36 @@ class SignUp extends Component {
                     </div> 
                 </div>
                 }
+
+                {this.state.viewSteper == '4' && 
+                                    <div className="configure_sec">
+                                        <div className="core_sec p-b-30">
+                                        <div className="container form_cover p-0"> 
+                                                <Form> 
+                                                    <div className="container bg_white">                                                                       
+                                                        <Row>
+                                                            <Col sm={12}>
+                                                                <div className="complete_box text-center">
+                                                                    <img className="complete_logo m-b-40" src={require('../images/complete_logo.svg')} />
+                                                                    <p>By clicking complete you agree to the TB terms and conditions listed below</p> 
+                                                                    {/* <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms and conditions</h5>    */}
+                                                                </div>
+                                                            </Col>
+                                                            <Col sm={12}>
+                                                            <div className="text-center m-t-40 m-b-40">
+                                                                <div>
+                                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
+                                                                    <Button className="button_base btn_radius btn_submit btn_complete m-l-5">COMPLETE </Button>
+                                                                </div>
+                                                            </div>
+                                                        </Col>                                                                                                       
+                                                        </Row>                                                                
+                                                </div>                                                
+                                            </Form>                                            
+                                        </div>      
+                                    </div> 
+                                </div>
+                                }
 
                </div>
             </React.Fragment>

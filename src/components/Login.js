@@ -40,7 +40,7 @@ export class Login extends Component {
                 <div className="login_sec">
                     <div className="container-fluid">
                     <Row>
-                        <Col sm={3} className="p-0">
+                        <Col md={3} className="p-0 mobile_hide">
                             <div className="login_bg">
                                 <div className="welcome_txt">
                                     <h1>Welcome!</h1>
@@ -49,7 +49,7 @@ export class Login extends Component {
                                 </div>
                             </div>
                         </Col>
-                        <Col sm={9}>
+                        <Col sm={12} xs={12} md={9}>
                             <div className="login_wrapper">
                                 <div className="login_box ">
                                     <img src={require('../images/logo.svg')} />

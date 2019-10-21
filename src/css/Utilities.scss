@@ -75,3 +75,11 @@ body{font-family: 'Open Sans', sans-serif !important;font-size:14px !important;}
       padding-right: 0px + $i !important
     }
   }
+
+  /*----Font-weight------------------*/
+$weight-slug: fw;
+@for $i from 10 through 1000 {
+  .#{$weight-slug}-#{$i}{
+    font-weight: 0 + $i
+  }
+}

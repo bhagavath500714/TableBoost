@@ -106,7 +106,7 @@ class AddAsset extends Component {
                                             <Col sm={6}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Purchased Date</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Select Date" />
+                                                    <Input type="date" name="email" id="exampleEmail" placeholder="Select Date" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
@@ -181,7 +181,8 @@ class AddAsset extends Component {
                                             </Col>                                            
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">
-                                                    <Button className="button_base btn_radius btn_add">ADD </Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"> CANCEL</Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_next m-l-5 btn_add">ADD </Button>
                                                 </div>
                                             </Col>
                                         </Row>

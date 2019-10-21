@@ -75,65 +75,58 @@ class AddVendor extends Component {
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Email Address" />
                                                 </FormGroup>
                                             </Col> 
-                                            <Col sm={4}>
+                                            {/* <Col sm={4}>
                                                     <FormGroup>
                                                         <Label for="exampleSelect">Role</Label>
                                                             <Input type="select" name="select" id="exampleSelect">
                                                             <option>Employee</option>
                                                             </Input>
                                                         </FormGroup>
-                                            </Col>
+                                            </Col> */}
                                             <Col sm={2}>
-                                                <FormGroup check className="custom_check m-t-35">
+                                                <FormGroup check className="custom_check m-b-20 ">
                                                     <Input type="checkbox" name="check" id="exampleCheck"/>
                                                     <Label for="exampleCheck" check>Supplier</Label>
                                                 </FormGroup>
                                             </Col>
-                                            <Col sm={6}>
-                                                <FormGroup check className="custom_check m-t-35">
+                                            <Col sm={10}>
+                                                <FormGroup check className="custom_check  m-b-20 ">
                                                     <Input type="checkbox" name="check" id="exampleCheck"/>
                                                     <Label for="exampleCheck" check>Service Provider</Label>
                                                 </FormGroup>
-                                            </Col>                                                                                            
-                                        </Row>                                                                
-                                    </div>
-                                    <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">Vendor Details <span className="txt_optional">(Optional)</span></h5>
-                                        <hr />
-                                    </div>
-                                    <div className="container bg_white">                                                                       
-                                        <Row>
-                                        <Col sm={6}>
+                                            </Col>
+                                            <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">First Name</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter First Name" />
+                                                    <Label className="m-b-10" for="exampleEmail">Contract Date</Label>
+                                                    <Input type="date" name="email" id="exampleEmail" placeholder="Select Date" />
+                                                </FormGroup>
+                                            </Col> 
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Payment Terms</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Payment Terms" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Last Name</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Last Name" />
+                                                    <Label className="m-b-10" for="exampleEmail">Hourly Rate</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Hourly Rate" />
                                                 </FormGroup>
-                                            </Col>
+                                            </Col> 
                                             <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Email</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Email Address" />
+                                                    <Label className="m-b-10" for="exampleEmail">Emergency Hourly Rate</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Emergency Hourly Rate" />
                                                 </FormGroup>
-                                            </Col>
-                                            <Col sm={6}>
-                                                <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Number" />
-                                                </FormGroup>
-                                            </Col>
+                                            </Col> 
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">
-                                                    <Button className="button_base btn_radius btn_add">ADD </Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"> CANCEL</Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_next m-l-5 btn_add">ADD </Button>
                                                 </div>
-                                            </Col>
-                                        </Row>
-                                    </div>
+                                            </Col>                                                                                         
+                                        </Row>                                                                
+                                    </div>                                    
                                 </Form>
                             </div>      
                         </div> 
