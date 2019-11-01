@@ -6,7 +6,7 @@
 
 /*------Login sec ----------------*/
 .login_sec{
-    .login_bg{background-image: url(./images/l_bg.jpg);background-size: contain;width: 100%;height: 100vh;background-repeat: round;@include flex-center;
+    .login_bg{background-image: url(./images/l_bg.jpg);background-size: cover;width: 100%;height: 100vh;background-repeat: round;@include flex-center;
         .welcome_txt{@include flex-center;flex-direction: column; width: 280px;text-align: center;
         h1{color:color(c_white);}
         p{color:color(c_gray);}
@@ -19,6 +19,7 @@
             .login_btn{background-color:color(c_black);}
         }
     }
+    .signup-txt{display:none;}
 }
 /*------Forgot Passwordsec ----------------*/
 .forgot_model{
@@ -33,9 +34,10 @@
 /*------Headersec ----------------*/
 .heade_sec{height:82px;display: flex;align-items: center;background-color:color(c_white);
   .logo_img{width:160px;}
+  .m-logo{display:none;}
 }
 /*------Signupsec ----------------*/
-.work_area{background-color: color(c_bg);
+.work_area{background-color: color(c_bg);min-height: calc(100vh - 82px);
   .steper_sec{
     .steper_set{display: flex;flex-direction: column;align-items: flex-end;
       .steper_title{width:740px;text-align: right;font-family: 'Montserrat', sans-serif;}
@@ -79,12 +81,18 @@
   }
   .configure_sec{
     .btn_complete{background:color(c_black) !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
-    .terms_link{text-transform: uppercase;font-family: 'Montserrat', sans-serif;font-size: 16px;color:color(c_red);cursor: pointer;}
+    .terms_link{text-transform: uppercase;font-family: 'Montserrat', sans-serif;font-size: 16px;color:color(c_black);cursor: pointer;}
     .complete_logo{margin-top:120px;}
+    .action_btn{@include flex-center;
+      .btn_back{@include flex-center;}
+    }
   }
   .invite-w{width:722px;}
   .invate_sec{
     .invite_label{font-weight: 100;font-size: 18px;}
     .invite_txt{font-weight: 400;font-size: 18px;}
+    .terms-txt{text-align: right;margin:0;font-size: 12px;
+      .heiglit-txt{color:color(c_red);}
+    }
   }
 }

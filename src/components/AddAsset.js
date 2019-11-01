@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import { Button, Form, FormGroup, Label, Input, Row, Col} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 class AddAsset extends Component {
@@ -16,16 +17,16 @@ class AddAsset extends Component {
             <React.Fragment>
                 <Header/>
                 <div className="work_area">
-                    <div className="sub_pagetitle">
-                        <div className="container p-0">
-                            <h6 className="sub_title p-t-30 p-b-30">Create your first asset by entering as many details as needed to identify the item</h6>
+                    <div className="sub_pagetitle m-sec">
+                        <div className="container m-padding p-0 ">
+                            <h6 className="sub_title p-t-30 p-b-30">Create your first FFE (Furni., Fixtures and Equip.) by entering as many details as needed to identify the item</h6>
                         </div>                        
                     </div>
                         <div className="asset_sec">
                             <div className="core_sec p-b-30">
                             <div className="container form_cover p-0">                             
                                 <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">Asset</h5>
+                                        <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.)</h5>
                                         <hr />
                                     </div>
                                     <Form> 
@@ -34,7 +35,7 @@ class AddAsset extends Component {
                                                 <Col sm={12}>
                                                     <FormGroup >
                                                         <Label className="m-b-10" for="exampleEmail">Name</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter ticket title" />
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter FFE Name" />
                                                     </FormGroup>
                                                 </Col>
                                                 <Col sm={6}>
@@ -54,7 +55,7 @@ class AddAsset extends Component {
                                             </Row>                                                                
                                     </div>
                                     <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">Asset Details <span className="txt_optional">(Optional)</span></h5>
+                                        <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.) Details <span className="txt_optional">(Optional)</span></h5>
                                         <hr />
                                     </div>
                                     <div className="container bg_white">                                                                       
@@ -150,7 +151,7 @@ class AddAsset extends Component {
                                         </Row>
                                     </div>
                                     <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">Vendor Details <span className="txt_optional">(Optional)</span></h5>
+                                        <h5 className="p-l-15">Service Provider Details <span className="txt_optional">(Optional)</span></h5>
                                         <hr />
                                     </div>
                                     <div className="container bg_white">                                                                       
@@ -181,7 +182,7 @@ class AddAsset extends Component {
                                             </Col>                                            
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">
-                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"> CANCEL</Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"> <Link to="/signup"> CANCEL </Link></Button>
                                                     <Button className="button_base btn_radius btn_submit btn_next m-l-5 btn_add">ADD </Button>
                                                 </div>
                                             </Col>

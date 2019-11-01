@@ -11,6 +11,25 @@
         }
     }
     .button_base {min-width: 75px;}
+    .login_sec{background-image: url(../images/phone-bg.png);background-size: cover;width: 100vw;height: 100vh;background-repeat: round;
+        .login_btn{width:100%;border-radius:3px !important;margin-top:15px;}
+        .signup-txt{padding-top: 15px;width: 100%;display: flex !important;align-items: center;justify-content: center;color:color(c_black);font-size: 12px;}
+        .logo-center{text-align: center;}
+    }
+    .mobile_link{text-align: right;
+        .button_link{
+            background-color: transparent !important;width: auto;padding: 0;color:#000 !important;font-weight: 700;;
+            a{color:#000 !important;font-weight: 700;}
+        }
+    } 
+    .mobile_link .button_link svg path{ fill:#000 !important;} 
+    .create_sec .btn_submit, .asset_sec .btn_submit, .vendor_sec .btn_submit, .configure_sec .btn_submit, .invate_sec .btn_submit, .ticket_sec .btn_submit{min-width:120px !important;}    
+    .sub_pagetitle .container{padding: 0px 15px !important;}
+    .m-logo{display:block !important;}
+    .d-logo{display:none !important;}
+    .m-header{background-color: color(c_black) !important;} 
+    .work_area .invite-w{width:auto !important;}     
+    .m-space{margin:7px 0px !important;}  
 }  
 @media (min-width: 481px) and (max-width: 767px) {}
 @media (min-width: 320px) and (max-width: 480px) {
@@ -20,5 +39,4 @@
     .button_base {font-size: 13px !important;}
     .mobile-m{margin-top:0 !important;margin-bottom: 10px !important;}
     .mobile-b-10{margin-bottom:10px;}
-    .sub_pagetitle .container{padding: 0px 15px !important;}
 }

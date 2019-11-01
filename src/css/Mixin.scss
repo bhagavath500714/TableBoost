@@ -14,6 +14,8 @@
 .m-header_sec{display: flex;align-items: center;justify-content: space-between;}
 .skip_txt{display: flex;align-items: center;justify-content: center;color:#000;}
 .invate_sec .btn_add, .asset_sec .btn_add, .vendor_sec .btn_add{background:color(c_black) !important;}
+.sub_txt{color:color(c_red);top: -.5px;}
+.button_base a{color:#fff !important;}
 .button_link{width:200px;border:none !important;background-color: color(c_black) !important;color:color(c_white) !important;height: 35px;font-size: 12px !important;@include flex-center;position:relative;
     a{color:color(c_white);
         &:hover {color:color(c_white);} 

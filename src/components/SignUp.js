@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Row, Col} from 'reactstrap';
 import Header from './Header';
 import { Link } from 'react-router-dom';
+import helperSvg from "../images/helperSvg";
 
 class SignUp extends Component {
     constructor(props) {
@@ -17,6 +18,9 @@ class SignUp extends Component {
     }
 
     render() {
+        const { svgPath, styles} = helperSvg;
+        const { M16 } = svgPath;
+
         return (
             <React.Fragment>
                 <Header/>
@@ -78,25 +82,25 @@ class SignUp extends Component {
                                             <Row>
                                                 <Col sm={4} xs={12}>
                                                     <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">Name</Label>
+                                                        <Label className="m-b-10" for="exampleEmail">Name <sup className="sub_txt">*</sup></Label>
                                                         <Input type="email" name="email" id="exampleEmail" placeholder="Enter Restaurant Name" />
                                                     </FormGroup>
                                                 </Col>
                                                 <Col sm={8}>
                                                     <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">Address</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Your Address" />
+                                                        <Label className="m-b-10" for="exampleEmail">Address <sup className="sub_txt">*</sup></Label>
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Address" />
                                                     </FormGroup>
                                                 </Col>
                                                 <Col sm={4}>
                                                     <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">City</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Your City" />
+                                                        <Label className="m-b-10" for="exampleEmail">City <sup className="sub_txt">*</sup></Label>
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter City" />
                                                     </FormGroup>
                                                 </Col>
                                                 <Col sm={4}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">State</Label>
+                                                    <Label for="exampleSelect">State <sup className="sub_txt">*</sup></Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>Enter State</option>
                                                         </Input>
@@ -104,7 +108,7 @@ class SignUp extends Component {
                                                 </Col>
                                                 <Col sm={4}>
                                                     <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">Zip</Label>
+                                                        <Label className="m-b-10" for="exampleEmail">Zip <sup className="sub_txt">*</sup></Label>
                                                         <Input type="email" name="email" id="exampleEmail" placeholder="Enter Zip" />
                                                     </FormGroup>
                                                 </Col>
@@ -116,7 +120,7 @@ class SignUp extends Component {
                                                 </Col>
                                                 <Col sm={8}>
                                                     <FormGroup>
-                                                        <Label for="exampleSelect">Restaurant Type</Label>
+                                                        <Label for="exampleSelect">Restaurant Type <sup className="sub_txt">*</sup></Label>
                                                             <Input type="select" name="select" id="exampleSelect">
                                                             <option>Coffee Shop</option>
                                                             </Input>
@@ -140,13 +144,13 @@ class SignUp extends Component {
                                         <Row>
                                             <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">First Name</Label>
+                                                    <Label className="m-b-10" for="exampleEmail">First Name <sup className="sub_txt">*</sup></Label>
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter First Name" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Last Name</Label>
+                                                    <Label className="m-b-10" for="exampleEmail">Last Name <sup className="sub_txt">*</sup></Label>
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Last Name" />
                                                 </FormGroup>
                                             </Col>
@@ -162,9 +166,17 @@ class SignUp extends Component {
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Number" />
                                                 </FormGroup>
                                             </Col>
+                                            <Col sm={6}>
+                                                    <FormGroup>
+                                                        <Label for="exampleSelect">Role</Label>
+                                                            <Input type="select" name="select" id="exampleSelect">
+                                                            <option>Select Role</option>
+                                                            </Input>
+                                                    </FormGroup>
+                                                </Col>
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">
-                                                    <Button className="button_base btn_radius btn_submit">NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
+                                                    <Button className="button_base btn_radius btn_submit" onClick={() => this.stepperView('2')}>NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
                                                 </div>
                                             </Col>
                                         </Row>
@@ -183,7 +195,7 @@ class SignUp extends Component {
                        <div className="title_sec p-t-30">
                        <div className="m-header_sec">
                             <h5 className="p-l-15">Add User</h5>
-                                <a className="skip_txt p-r-15" href="javascript:void(0);"><img className="m-r-10" src={require('../images/skip_step.svg')} /> Skip this Step</a>
+                                <a className="skip_txt p-r-15" href="javascript:void(0);" onClick={() => this.stepperView('3')}><img className="m-r-10" src={require('../images/skip_step.svg')} /> Skip this Step</a>
                             </div>
                         <hr />
                            </div>
@@ -192,13 +204,13 @@ class SignUp extends Component {
                                <Row>
                                    <Col sm={6}>
                                        <FormGroup >
-                                           <Label className="m-b-10" for="exampleEmail">First Name</Label>
+                                           <Label className="m-b-10" for="exampleEmail">First Name <sup className="sub_txt">*</sup></Label>
                                            <Input type="email" name="email" id="exampleEmail" placeholder="Enter First Name" />
                                        </FormGroup>
                                    </Col>
                                    <Col sm={6}>
                                        <FormGroup >
-                                           <Label className="m-b-10" for="exampleEmail">Last Name</Label>
+                                           <Label className="m-b-10" for="exampleEmail">Last Name <sup className="sub_txt">*</sup></Label>
                                            <Input type="email" name="email" id="exampleEmail" placeholder="Enter Last Name" />
                                        </FormGroup>
                                    </Col>
@@ -230,9 +242,9 @@ class SignUp extends Component {
                                    <Col sm={12}>
                                        <div className="text-center m-t-40 m-b-40">
                                            <div>
-                                                <Button className="button_base btn_radius btn_submit btn_back"><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
+                                                <Button className="button_base btn_radius btn_submit btn_back" onClick={() => this.stepperView('1')}><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
                                                 <Button className="button_base btn_another m-l-10 m-r-10">ADD ANOTHER </Button>
-                                                <Button className="button_base btn_radius btn_submit btn_next">NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
+                                                <Button className="button_base btn_radius btn_submit btn_next" onClick={() => this.stepperView('3')}>NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
                                            </div>                                           
                                        </div>
                                    </Col>
@@ -251,8 +263,8 @@ class SignUp extends Component {
                         <div className="container form_cover p-0">                             
                             <div className="title_sec p-t-30">
                                 <div className="m-header_sec">
-                                <h5 className="p-l-15">Ticket  Details</h5>
-                                    <a className="skip_txt p-r-15" href="javascript:void(0);"><img className="m-r-10" src={require('../images/skip_step.svg')} /> Skip this Step</a>
+                                <h5 className="p-l-15">Create Ticket</h5>
+                                    <a className="skip_txt p-r-15" href="javascript:void(0);" onClick={() => this.stepperView('4')}><img className="m-r-10" src={require('../images/skip_step.svg')} /> Skip this Step</a>
                                 </div>
                                 <hr />
                                 </div>
@@ -262,7 +274,7 @@ class SignUp extends Component {
                                             <Col sm={12}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Title</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter the ticket title" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter the ticket summary" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
@@ -291,14 +303,19 @@ class SignUp extends Component {
                                             </Col>
                                             <Col sm={8}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">Asset</Label>
+                                                    <Label for="exampleSelect">FFE (Furni., Fixtures and Equip.) </Label>
                                                         <Input type="select" name="select" id="exampleSelect">
-                                                        <option>Select</option>
+                                                        <option>Select FFE</option>
                                                         </Input>
                                                 </FormGroup>
                                             </Col>
-                                            <Col sm={4}>
-                                                <Button className="button_link m-t-29 mobile-m"> <img className="m-r-10" src={require('../images/plus.svg')} /><Link to="/asset"> ADD NEW ASSET </Link></Button>
+                                            <Col sm={4} className="mobile_link">
+                                                <Button className="button_link m-t-29 mobile-m"> 
+                                                <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d={M16} fill={styles.svg.fillcolor} />
+                                                </svg>
+                                                {/* <img className="m-r-10" src={require('../images/plus.svg')} /> */}
+                                                <Link to="/asset"> ADD NEW FFE </Link></Button>
                                             </Col>
                                             <Col sm={12}>
                                             <FormGroup>
@@ -308,7 +325,7 @@ class SignUp extends Component {
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">Asign</Label>
+                                                    <Label for="exampleSelect">Asign Type</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>External</option>
                                                         </Input>
@@ -316,14 +333,16 @@ class SignUp extends Component {
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">Asignee</Label>
+                                                    <Label for="exampleSelect">Asign To</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>Select</option>                                                        
                                                         </Input>
                                                 </FormGroup>
                                             </Col>
-                                            <Col sm={4}>
-                                                <Button className="button_link m-t-29 mobile-m"> <img className="m-r-10" src={require('../images/plus.svg')} /> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
+                                            <Col sm={4} className="mobile_link">
+                                                <Button className="button_link m-t-29 mobile-m"> <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d={M16} fill={styles.svg.fillcolor} />
+                                                </svg> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
@@ -334,7 +353,7 @@ class SignUp extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                            <FormGroup check className="custom_check m-t-35 mobile-m">
+                                            <FormGroup check className="custom_check m-t-35 mobile-m m-space">
                                                 <Input type="checkbox" name="check" id="exampleCheck"/>
                                                 <Label for="exampleCheck" check>Recurring</Label>
                                             </FormGroup>
@@ -367,8 +386,10 @@ class SignUp extends Component {
                                 </div>
                                 <div className="container bg_white">                                                                       
                                     <Row>
-                                        <Col sm={3} className="upload_btn">
-                                            <Button className="button_link mobile-b-10"> <img className="m-r-10" src={require('../images/plus.svg')} /> CHOOSE IMAGE 
+                                        <Col sm={3} className="upload_btn mobile_link">
+                                            <Button className="button_link mobile-b-10">  <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d={M16} fill={styles.svg.fillcolor} />
+                                                </svg> CHOOSE IMAGE 
                                                 <input type="file" />
                                             </Button> 
                                         </Col>
@@ -381,8 +402,8 @@ class SignUp extends Component {
                                         <Col sm={12}>
                                             <div className="text-center m-t-40 m-b-40">
                                                 <div>
-                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
-                                                    <Button className="button_base btn_radius btn_submit btn_next m-l-5">NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5" onClick={() => this.stepperView('2')}><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
+                                                    <Button className="button_base btn_radius btn_submit btn_next m-l-5" onClick={() => this.stepperView('4')}>NEXT <img className="m-l-10" src={require('../images/next_arrow.svg')} /></Button>
                                                 </div>
                                             </div>
                                         </Col>
@@ -406,13 +427,13 @@ class SignUp extends Component {
                                                                 <div className="complete_box text-center">
                                                                     <img className="complete_logo m-b-40" src={require('../images/complete_logo.svg')} />
                                                                     <p>By clicking complete you agree to the TB terms and conditions listed below</p> 
-                                                                    {/* <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms and conditions</h5>    */}
+                                                                    <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms and conditions</h5>   
                                                                 </div>
                                                             </Col>
                                                             <Col sm={12}>
                                                             <div className="text-center m-t-40 m-b-40">
-                                                                <div>
-                                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5"><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
+                                                                <div className="action_btn">
+                                                                    <Button className="button_base btn_radius btn_submit btn_back m-r-5" onClick={() => this.stepperView('3')}><img className="m-r-10" src={require('../images/back_arrow.svg')} /> BACK</Button>
                                                                     <Button className="button_base btn_radius btn_submit btn_complete m-l-5">COMPLETE </Button>
                                                                 </div>
                                                             </div>

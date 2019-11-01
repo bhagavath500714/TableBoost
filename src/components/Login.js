@@ -52,19 +52,22 @@ export class Login extends Component {
                         <Col sm={12} xs={12} md={9}>
                             <div className="login_wrapper">
                                 <div className="login_box ">
-                                    <img src={require('../images/logo.svg')} />
+                                    <div className="logo-center">
+                                        <img src={require('../images/logo.svg')} />
+                                    </div>                                    
                                     <Form>
                                         <FormGroup className="m-t-41">
                                             <Label className="m-b-10" for="exampleEmail">Email</Label>
-                                            <Input type="email" name="email" id="exampleEmail" placeholder="Enter Email ID" />
+                                            <Input type="email" name="email" id="exampleEmail" placeholder="Enter Email" />
                                         </FormGroup>
                                         <FormGroup className="m-t-30 m-b-0">
                                             <Label className="m-b-10" for="examplePassword">Password</Label>
                                             <Input type="password" name="password" id="examplePassword" placeholder="Enter Password" />
                                         </FormGroup>
                                         <a href="javascript:void(0);" className="forgot_txt m-t-13" onClick={() => this.toggleConz()}>Forgot Password?</a>
-                                        <Button className="button_base btn_radius float-right login_btn">LOGIN</Button>
+                                        <Button className="button_base btn_radius float-right login_btn">LOGIN</Button>                                        
                                     </Form>
+                                    <Link to="/signup" className="signup-txt"> Create a free Account? Sign up </Link>
                                 </div>
                             </div>
                         </Col>                        
