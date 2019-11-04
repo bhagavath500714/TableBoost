@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import AddAsset from './components/AddAsset';
 import AddVendor from './components/AddVendor';
 import UserInvite from './components/UserInvite';
+import Dashboard from './components/Dashboard';
 import './custom.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route path="/asset" component={AddAsset} />
             <Route path="/vendor" component={AddVendor} />
             <Route path="/invite" component={UserInvite} />
+            <Route path="/dashboard" component={Dashboard} />
         </React.Fragment>
     </BrowserRouter>
     , document.getElementById('root'));
