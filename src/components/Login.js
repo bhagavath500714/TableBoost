@@ -45,7 +45,7 @@ export class Login extends Component {
                                 <div className="welcome_txt">
                                     <h1>Welcome!</h1>
                                     <p>Sign up your restaurant and start saving time and money.</p>
-                                    <Button className="button_base btn_radius button_bordered"><Link to="/signup">SIGN UP </Link></Button>
+                                    <Link className="button_base btn_radius button_bordered" to="/signup">SIGN UP </Link>
                                 </div>
                             </div>
                         </Col>

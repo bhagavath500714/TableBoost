@@ -4,7 +4,7 @@
 
 .button_base{height:43px;min-width:150px;font-weight: 100 !important;}
 .btn_radius{border-radius: 21px !important;}
-.button_bordered{background: transparent !important;border:1px solid color(c_white) !important;}
+.button_bordered{background: transparent !important;border:1px solid color(c_white) !important;@include flex-center;}
 .btn_another{background-color: color(c_black) !important;border-radius: 0 !important;}
 .btn_back{border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
 .btn_next{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}

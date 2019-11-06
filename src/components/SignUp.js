@@ -162,8 +162,8 @@ class SignUp extends Component {
                                             </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Number" />
+                                                    <Label className="m-b-10" for="exampleEmail">Cell Phone</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Cell Phone Number" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>

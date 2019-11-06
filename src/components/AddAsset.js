@@ -49,7 +49,7 @@ class AddAsset extends Component {
                                                 <Col sm={6}>
                                                     <FormGroup >
                                                         <Label className="m-b-10" for="exampleEmail">Location</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Location" />
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Location, ie kitchen or bar" />
                                                     </FormGroup>
                                                 </Col>                                                
                                             </Row>                                                                
