@@ -7,8 +7,10 @@ import AddAsset from './components/AddAsset';
 import AddVendor from './components/AddVendor';
 import UserInvite from './components/UserInvite';
 import Dashboard from './components/Dashboard';
+import Tickets from './components/Tickets';
 import './custom.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Mobmenu from './components/Mobmenu';
 
 
 
@@ -21,6 +23,8 @@ ReactDOM.render(
             <Route path="/vendor" component={AddVendor} />
             <Route path="/invite" component={UserInvite} />
             <Route path="/dashboard" component={Dashboard} />
+            <Route path="/tickets" component={Tickets} />
+            <Route path="/mobmenu" component={Mobmenu} />
         </React.Fragment>
     </BrowserRouter>
     , document.getElementById('root'));

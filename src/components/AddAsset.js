@@ -1,64 +1,64 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import { Button, Form, FormGroup, Label, Input, Row, Col} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 
 class AddAsset extends Component {
     constructor(props) {
         super(props)
-        
+
         this.state = {
-        } 
+        }
     }
 
     render() {
         return (
             <React.Fragment>
-                <Header/>
+                <Header />
                 <div className="work_area">
                     <div className="sub_pagetitle m-sec">
                         <div className="container m-padding p-0 ">
                             <h6 className="sub_title p-t-30 p-b-30">Create your first FFE (Furni., Fixtures and Equip.) by entering as many details as needed to identify the item</h6>
-                        </div>                        
+                        </div>
                     </div>
-                        <div className="asset_sec">
-                            <div className="core_sec p-b-30">
-                            <div className="container form_cover p-0">                             
+                    <div className="asset_sec">
+                        <div className="core_sec p-b-30">
+                            <div className="container form_cover p-0">
                                 <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.)</h5>
-                                        <hr />
-                                    </div>
-                                    <Form> 
-                                        <div className="container bg_white">                                                                       
-                                            <Row>
-                                                <Col sm={12}>
-                                                    <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">Name</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter FFE Name" />
-                                                    </FormGroup>
-                                                </Col>
-                                                <Col sm={6}>
-                                                    <FormGroup>
-                                                        <Label for="exampleSelect">Category</Label>
-                                                            <Input type="select" name="select" id="exampleSelect">
-                                                            <option>Plumbing</option>
-                                                            </Input>
-                                                        </FormGroup>
-                                                </Col>
-                                                <Col sm={6}>
-                                                    <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">Location</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Location, ie kitchen or bar" />
-                                                    </FormGroup>
-                                                </Col>                                                
-                                            </Row>                                                                
+                                    <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.)</h5>
+                                    <hr />
+                                </div>
+                                <Form>
+                                    <div className="container bg_white">
+                                        <Row>
+                                            <Col sm={12}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Name</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter FFE Name" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup>
+                                                    <Label for="exampleSelect">Category</Label>
+                                                    <Input type="select" name="select" id="exampleSelect">
+                                                        <option>Plumbing</option>
+                                                    </Input>
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Location</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Location, ie kitchen or bar" />
+                                                </FormGroup>
+                                            </Col>
+                                        </Row>
                                     </div>
                                     <div className="title_sec p-t-30">
                                         <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.) Details <span className="txt_optional">(Optional)</span></h5>
                                         <hr />
                                     </div>
-                                    <div className="container bg_white">                                                                       
+                                    <div className="container bg_white">
                                         <Row>
                                             <Col sm={6}>
                                                 <FormGroup >
@@ -90,7 +90,7 @@ class AddAsset extends Component {
                                         <h5 className="p-l-15">Supplier Details <span className="txt_optional">(Optional)</span></h5>
                                         <hr />
                                     </div>
-                                    <div className="container bg_white">                                                                       
+                                    <div className="container bg_white">
                                         <Row>
                                             <Col sm={6}>
                                                 <FormGroup >
@@ -123,12 +123,12 @@ class AddAsset extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                                    <FormGroup>
-                                                        <Label for="exampleSelect">State</Label>
-                                                            <Input type="select" name="select" id="exampleSelect">
-                                                            <option>Enter State</option>
-                                                            </Input>
-                                                        </FormGroup>
+                                                <FormGroup>
+                                                    <Label for="exampleSelect">State</Label>
+                                                    <Input type="select" name="select" id="exampleSelect">
+                                                        <option>Enter State</option>
+                                                    </Input>
+                                                </FormGroup>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup >
@@ -147,14 +147,14 @@ class AddAsset extends Component {
                                                     <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Phone" />
                                                 </FormGroup>
-                                            </Col>                                            
+                                            </Col>
                                         </Row>
                                     </div>
                                     <div className="title_sec p-t-30">
                                         <h5 className="p-l-15">Service Provider Details <span className="txt_optional">(Optional)</span></h5>
                                         <hr />
                                     </div>
-                                    <div className="container bg_white">                                                                       
+                                    <div className="container bg_white">
                                         <Row>
                                             <Col sm={6}>
                                                 <FormGroup >
@@ -167,7 +167,7 @@ class AddAsset extends Component {
                                                     <Label className="m-b-10" for="exampleEmail">Website</Label>
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Vendor Website" />
                                                 </FormGroup>
-                                            </Col>                                            
+                                            </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Address</Label>
@@ -179,7 +179,7 @@ class AddAsset extends Component {
                                                     <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Phone" />
                                                 </FormGroup>
-                                            </Col>                                            
+                                            </Col>
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">
                                                     <Button className="button_base btn_radius btn_submit btn_back m-r-5"> <Link to="/signup"> CANCEL </Link></Button>
@@ -189,9 +189,9 @@ class AddAsset extends Component {
                                         </Row>
                                     </div>
                                 </Form>
-                                
-                            </div>      
-                        </div> 
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </React.Fragment>

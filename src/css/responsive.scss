@@ -1,7 +1,95 @@
 @media (min-width: 1201px) and (max-width: 1400px) {}
 @media (min-width: 991px) and (max-width: 1200px) {}
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 1025px) { .tab{display: none;} }
+@media (min-width: 767px) and (max-width: 1024px) {
+    
+    .dashboard_wrapper
+    {
+        .side_bar {
+            width: 100px !important;
+        }
+   
+    .work_area_dashboard {
+        padding: 20px;
+        height: calc(100% - 75px);
+        overflow: auto;
+        .card {
+            width: 325px !important
+        }
+        .full_width.card {height: max-content !important;}
+    } } 
+    .main_area {width: calc(100% - 100px) !important;}
+    .menu_sec li{   
+        margin-bottom: 5px !important;
+        height: 80px !important;
+        padding: 10px !important;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+        font-size: 10px !important;
+        img {
+            width: 30px;
+            margin-bottom: 5px;
+            padding: 0 !important;
+        }}
+    .web{display: none;}
+}
+@media (min-width: 769px) {
+    .main_area_header.responsive_mob {
+    display: none !important;
+}}
 @media (min-width: 320px) and (max-width: 768px) {
+    .w-300{width: 300px !important;}
+    .main_area_header {
+        &.responsive_web {
+          display: none !important;
+        }
+      
+        &.responsive_mob {
+          background: black !important;
+          justify-content: space-between !important;
+          .page_title {
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 1px;
+        }
+        }
+      }
+    .dashboard_wrapper .work_area_dashboard {
+        padding: 15px !important;
+     .card_main .card {
+        width: calc(100%) !important;
+        margin: 15px 0 0 0 !important;
+      
+        // &:nth-child(odd) {
+        //   margin: 0 7px 0 0 !important;
+        // }
+      
+        // &:nth-child(even) {
+        //   margin: 0 0 0 7px !important;
+        // }
+      }
+   .card_main .add_con {
+        flex-direction: row !important;
+        margin: 20px 0 !important;
+        background: black;
+        border-radius: 3px;
+        box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        padding: 12px;
+        width: 100%;
+        img {
+            filter: invert(0) sepia(2) saturate(0) hue-rotate(0deg) brightness(30);
+            width: 16px;
+        }
+        h3 {          
+            font-weight: 100 !important;;
+            color: white !important;;
+            text-transform: uppercase;
+            margin: 0 0 0 12px !important;
+        }
+    }}
+    .side_bar.dashboard_only {display: none !important}
+    .main_area {width: calc(100%) !important;}
     .mobile_hide{display:none;}
     .work_area{
         .steper_sec{
@@ -23,13 +111,14 @@
         }
     } 
     .mobile_link .button_link svg path{ fill:#000 !important;} 
-    .create_sec .btn_submit, .asset_sec .btn_submit, .vendor_sec .btn_submit, .configure_sec .btn_submit, .invate_sec .btn_submit, .ticket_sec .btn_submit{min-width:120px !important;}    
+    .create_sec .btn_submit, .asset_sec .btn_submit, .vendor_sec .btn_submit, .configure_sec .btn_submit, .invate_sec .btn_submit, .ticket_sec .btn_submit, .tb_craeteticket .btn_submit{min-width:120px !important;}    
     .sub_pagetitle .container{padding: 0px 15px !important;}
     .m-logo{display:block !important;}
     .d-logo{display:none !important;}
     .m-header{background-color: color(c_black) !important;} 
     .work_area .invite-w{width:auto !important;}     
-    .m-space{margin:7px 0px !important;}  
+    .m-space{margin:7px 0px !important;} 
+    .mobile-b-10{margin-bottom:10px !important;} 
 }  
 @media (min-width: 481px) and (max-width: 767px) {}
 @media (min-width: 320px) and (max-width: 480px) {
@@ -38,5 +127,5 @@
     .steper_sec .steper_set .count_base li .count_box .count:after{width: 45px !important;}
     .button_base {font-size: 13px !important;}
     .mobile-m{margin-top:0 !important;margin-bottom: 10px !important;}
-    .mobile-b-10{margin-bottom:10px;}
+    .mobile-b-10{margin-bottom:10px !important;}
 }

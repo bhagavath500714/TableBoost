@@ -1,10 +1,16 @@
 
  /*----Mixin------------------*/
- @mixin flex-center {display:flex;align-items: center;justify-content: center;}  
+ @mixin flex{display:flex;}
+ @mixin flex-wrap{flex-wrap: wrap;}
+ @mixin flex-center {display:flex;align-items: center;} 
+ @mixin flex-center-center {display:flex;align-items: center;justify-content: center;}  
+ @mixin flex-center-end {display:flex;align-items: center;justify-content: flex-end;}
+ @mixin flex-end-end {display:flex;align-items: flex-end;justify-content: flex-end;}
+ @mixin flex-center-between {display:flex;align-items: center;justify-content: space-between;}
 
 .button_base{height:43px;min-width:150px;font-weight: 100 !important;}
 .btn_radius{border-radius: 21px !important;}
-.button_bordered{background: transparent !important;border:1px solid color(c_white) !important;@include flex-center;}
+.button_bordered{background: transparent !important;border:1px solid color(c_white) !important;@include flex-center-center;}
 .btn_another{background-color: color(c_black) !important;border-radius: 0 !important;}
 .btn_back{border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
 .btn_next{border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;}
@@ -16,7 +22,7 @@
 .invate_sec .btn_add, .asset_sec .btn_add, .vendor_sec .btn_add{background:color(c_black) !important;}
 .sub_txt{color:color(c_red);top: -.5px;}
 .button_base a{color:#fff !important;}
-.button_link{width:200px;border:none !important;background-color: color(c_black) !important;color:color(c_white) !important;height: 35px;font-size: 12px !important;@include flex-center;position:relative;
+.button_link{width:200px;border:none !important;background-color: color(c_black) !important;color:color(c_white) !important;height: 35px;font-size: 12px !important;@include flex-center-center;position:relative;
     a{color:color(c_white);
         &:hover {color:color(c_white);} 
     }
@@ -29,3 +35,13 @@
 .custom_check{display:flex;align-items:center;
     .form-check-input{width:17px;height:17px;margin-top: 1px;}
 }
+
+.header_area{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1.77px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    img{margin-right: 15px;}
+  }

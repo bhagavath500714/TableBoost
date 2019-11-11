@@ -274,7 +274,7 @@ class SignUp extends Component {
                                             <Col sm={12}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Title</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter the ticket summary" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter ticket summary" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
@@ -320,12 +320,12 @@ class SignUp extends Component {
                                             <Col sm={12}>
                                             <FormGroup>
                                                 <Label for="exampleText">Description</Label>
-                                                <Input type="textarea" name="text" id="exampleText" placeholder="Add Description"/>
+                                                <Input type="textarea" name="text" id="exampleText" placeholder="Ticket Description"/>
                                             </FormGroup>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">Asign Type</Label>
+                                                    <Label for="exampleSelect">Assign Type</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>External</option>
                                                         </Input>
@@ -333,7 +333,7 @@ class SignUp extends Component {
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">Asign To</Label>
+                                                    <Label for="exampleSelect">Assign To</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>Select</option>                                                        
                                                         </Input>
@@ -427,7 +427,7 @@ class SignUp extends Component {
                                                                 <div className="complete_box text-center">
                                                                     <img className="complete_logo m-b-40" src={require('../images/complete_logo.svg')} />
                                                                     <p>By clicking complete you agree to the TB terms and conditions listed below</p> 
-                                                                    <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms and conditions</h5>   
+                                                                    <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms of Service</h5>   
                                                                 </div>
                                                             </Col>
                                                             <Col sm={12}>
