@@ -80,7 +80,7 @@ $prefix: tb_;
   
   /*----Padding Bottom------------------*/
   $class-slug: p-b;
-  @for $i from 1 through 100 {
+  @for $i from 0 through 100 {
     .#{$class-slug}-#{$i}{
       padding-bottom: 0px + $i !important
     }
@@ -88,7 +88,7 @@ $prefix: tb_;
   
   /*----padding left------------------*/
   $class-slug: p-l;
-  @for $i from 1 through 100 {
+  @for $i from 0 through 100 {
     .#{$class-slug}-#{$i}{
       padding-left: 0px + $i !important
     }
@@ -96,7 +96,7 @@ $prefix: tb_;
   
   /*----paddingn Right------------------*/
   $class-slug: p-r;
-  @for $i from 1 through 100 {
+  @for $i from 0 through 100 {
     .#{$class-slug}-#{$i}{
       padding-right: 0px + $i !important
     }

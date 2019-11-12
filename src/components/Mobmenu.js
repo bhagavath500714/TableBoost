@@ -27,7 +27,7 @@ class Mobmenu extends Component {
                             <ul>
                                 <li className="active"><img className="" src={require('../images/dashboard.svg')} /> Dashboard</li>
                                 <li><img className="" src={require('../images/tickets.svg')} />Tickets</li>
-                                <li><img className="" src={require('../images/assets.svg')} />ASSETS</li>
+                                <li><img className="" src={require('../images/assets.svg')} />FFE</li>
                                 <li><img className="" src={require('../images/vendors.svg')} />VENDORS</li>
                                 <li><img className="" src={require('../images/users.svg')} />USERS</li>
                             </ul>                            
