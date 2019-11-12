@@ -8,6 +8,9 @@ import Sidebar from "react-sidebar";
 import Login from './Login';
 import Mobmenu from './Mobmenu';
 import Tickets from './Tickets';
+import FFE from './FFE';
+import CreateFFE from './CreateFFE';
+
 const mql = window.matchMedia(`(min-width: 767px)`);
 
 class Dashboard extends Component {
@@ -53,7 +56,7 @@ class Dashboard extends Component {
         return (
             <React.Fragment>
                <Sidebar
-                 sidebar={ <Mobmenu/>}
+                 sidebar={ <Mobmenu selectMenu ={this.selectMenu}/>}
                  open={this.state.sidebarOpen}
                  onSetOpen={this.onSetSidebarOpen}
                  styles={{ sidebar: { background: "black" } }}>                
@@ -69,7 +72,7 @@ class Dashboard extends Component {
                             <ul>
                                 <li className={this.state.mactive == 'dashboard' ? 'active' : ''} onClick={() => this.selectMenu('dashboard')} ><img className="" src={require('../images/dashboard.svg')} /> Dashboard</li>
                                 <li className={this.state.mactive == 'tickets' ? 'active' : ''} onClick={() => this.selectMenu('tickets')}><img className="" src={require('../images/tickets.svg')} />Tickets</li>
-                                <li><img className="" src={require('../images/assets.svg')} />FFE</li>
+                                <li className={this.state.mactive == 'FFE' ? 'active' : ''} onClick={() => this.selectMenu('FFE')}><img className="" src={require('../images/assets.svg')} />FFE</li>
                                 <li><img className="" src={require('../images/vendors.svg')} />VENDORS</li>
                                 <li><img className="" src={require('../images/users.svg')} />USERS</li>
                             </ul>                            
@@ -156,6 +159,12 @@ class Dashboard extends Component {
                    }
                    {this.state.mactive == 'createticket' && 
                         <CreateTicket/>                       
+                   }
+                   {this.state.mactive == 'FFE' && 
+                        <FFE handleChangeState={this.handleChangeState}/>                       
+                   }
+                   {this.state.mactive == 'createFFE' && 
+                        <CreateFFE/>                       
                    }
                    </div>
                </div>               

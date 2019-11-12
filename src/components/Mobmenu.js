@@ -26,7 +26,7 @@ class Mobmenu extends Component {
                         <div className="menu_sec">
                             <ul>
                                 <li className="active"><img className="" src={require('../images/dashboard.svg')} /> Dashboard</li>
-                                <li><img className="" src={require('../images/tickets.svg')} />Tickets</li>
+                                <li onClick={() => this.props.selectMenu('tickets')} ><img className="" src={require('../images/tickets.svg')} />Tickets</li>
                                 <li><img className="" src={require('../images/assets.svg')} />FFE</li>
                                 <li><img className="" src={require('../images/vendors.svg')} />VENDORS</li>
                                 <li><img className="" src={require('../images/users.svg')} />USERS</li>
