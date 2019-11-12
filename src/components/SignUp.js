@@ -35,7 +35,7 @@ class SignUp extends Component {
                                         <h6 className="steper_title m-t-15">Add Managers and Employees who will be responsible for repair and maintenance tasks</h6>
                                     }
                                     {this.state.viewSteper == '3' && 
-                                        <h6 className="steper_title m-t-15">Create your first ticket by adding an asset (fryer, espresso machine…) and assigning that ticket to a crew member  or a vendor or supplier</h6>
+                                        <h6 className="steper_title m-t-15">Create your first ticket by adding an FFE (fryer, espresso machine…) and assigning that ticket to a crew member  or a vendor or supplier</h6>
                                     }
                                     {this.state.viewSteper == '4' && 
                                         <h6 className="steper_title m-t-15">Almost finished!</h6>

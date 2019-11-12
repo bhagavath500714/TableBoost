@@ -8,6 +8,7 @@ import AddVendor from './components/AddVendor';
 import UserInvite from './components/UserInvite';
 import Dashboard from './components/Dashboard';
 import Tickets from './components/Tickets';
+import FFE from './components/FFE';
 import './custom.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Mobmenu from './components/Mobmenu';
@@ -25,6 +26,7 @@ ReactDOM.render(
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/tickets" component={Tickets} />
             <Route path="/mobmenu" component={Mobmenu} />
+            <Route path="/FFE" component={FFE} />
         </React.Fragment>
     </BrowserRouter>
     , document.getElementById('root'));
