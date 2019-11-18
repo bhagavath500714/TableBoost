@@ -99,7 +99,7 @@ class CreateTicket extends Component {
                             </Col> */}
                             <Col sm={6} md={6} lg={4} xs={12}>
                                 <FormGroup>
-                                    <Label for="exampleSelect">Vendor</Label>
+                                    <Label for="exampleSelect">Supplier</Label>
                                     <Input type="select" name="select" id="exampleSelect">
                                         <option>Remtack INC</option>
                                     </Input>
@@ -108,7 +108,7 @@ class CreateTicket extends Component {
                             <Col sm={6} md={6} lg={4} xs={12} className="d_link">
                                 <Button className="button_link m-t-29 mobile-m"> <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d={M16} fill={styles.svg.fillcolor} />
-                                </svg> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
+                                </svg> <Link to="/vendor">ADD NEW SUPPLIER </Link></Button>
                             </Col>
                             <Col sm={6} md={6} lg={4} xs={12}>
                                 <FormGroup>

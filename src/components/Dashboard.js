@@ -73,7 +73,7 @@ class Dashboard extends Component {
                                 <li className={this.state.mactive == 'dashboard' ? 'active' : ''} onClick={() => this.selectMenu('dashboard')} ><img className="" src={require('../images/dashboard.svg')} /> Dashboard</li>
                                 <li className={this.state.mactive == 'tickets' ? 'active' : ''} onClick={() => this.selectMenu('tickets')}><img className="" src={require('../images/tickets.svg')} />Tickets</li>
                                 <li className={this.state.mactive == 'FFE' ? 'active' : ''} onClick={() => this.selectMenu('FFE')}><img className="" src={require('../images/assets.svg')} />FFE</li>
-                                <li><img className="" src={require('../images/vendors.svg')} />VENDORS</li>
+                                <li><img className="" src={require('../images/vendors.svg')} />SUPPLIER</li>
                                 <li><img className="" src={require('../images/users.svg')} />USERS</li>
                             </ul>                            
                         </div>
