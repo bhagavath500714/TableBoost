@@ -12,8 +12,13 @@ class FFE extends Component {
     render() {
         return (
             <React.Fragment>
-               <div className="work_area_dashboard">
-                       <div className="header_area">  <img className="" src={require('../images/FFE-black.svg')} /> FFE (Furn., Fixtures and Equip.)</div>
+               <div className="work_area_dashboard">                       
+                       <div className="detail-header m-t-40">
+                        <div className="header_area m-0">  <img className="" src={require('../images/FFE-black.svg')} /> FFE (Furn., Fixtures and Equip.)</div>
+                        <div className="toggle-icn">
+
+                        </div>                        
+                        </div>
                        <div className="card_main">
                        <Card>
                             <CardBody>
