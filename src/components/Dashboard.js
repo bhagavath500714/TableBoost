@@ -10,6 +10,8 @@ import Mobmenu from './Mobmenu';
 import Tickets from './Tickets';
 import FFE from './FFE';
 import CreateFFE from './CreateFFE';
+import Supplier from './Supplier';
+import Loader from './Loader';
 
 const mql = window.matchMedia(`(min-width: 767px)`);
 
@@ -73,7 +75,7 @@ class Dashboard extends Component {
                                 <li className={this.state.mactive == 'dashboard' ? 'active' : ''} onClick={() => this.selectMenu('dashboard')} ><img className="" src={require('../images/dashboard.svg')} /> Dashboard</li>
                                 <li className={this.state.mactive == 'tickets' ? 'active' : ''} onClick={() => this.selectMenu('tickets')}><img className="" src={require('../images/tickets.svg')} />Tickets</li>
                                 <li className={this.state.mactive == 'FFE' ? 'active' : ''} onClick={() => this.selectMenu('FFE')}><img className="" src={require('../images/assets.svg')} />FFE</li>
-                                <li><img className="" src={require('../images/vendors.svg')} />SUPPLIER</li>
+                                <li className={this.state.mactive == 'supplier' ? 'active' : ''} onClick={() => this.selectMenu('supplier')}><img className="" src={require('../images/vendors.svg')} />SUPPLIER</li>
                                 <li><img className="" src={require('../images/users.svg')} />USERS</li>
                             </ul>                            
                         </div>
@@ -165,6 +167,10 @@ class Dashboard extends Component {
                    }
                    {this.state.mactive == 'createFFE' && 
                         <CreateFFE/>                       
+                   }
+                   {this.state.mactive == 'supplier' && 
+                        <Supplier/>   
+                        // <Loader />                   
                    }
                    </div>
                </div>               

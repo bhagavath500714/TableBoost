@@ -45,3 +45,5 @@
     margin-top: 40px;
     img{margin-right: 15px;}
   }
+  .detail-header{@include flex-center-between;}
+  .pointer{cursor:pointer;}
