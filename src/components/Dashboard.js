@@ -11,6 +11,8 @@ import Tickets from './Tickets';
 import FFE from './FFE';
 import CreateFFE from './CreateFFE';
 import Supplier from './Supplier';
+import AddSupplier from './AddSupplier';
+import Users from './Users'
 import Loader from './Loader';
 
 const mql = window.matchMedia(`(min-width: 767px)`);
@@ -76,7 +78,7 @@ class Dashboard extends Component {
                                 <li className={this.state.mactive == 'tickets' ? 'active' : ''} onClick={() => this.selectMenu('tickets')}><img className="" src={require('../images/tickets.svg')} />Tickets</li>
                                 <li className={this.state.mactive == 'FFE' ? 'active' : ''} onClick={() => this.selectMenu('FFE')}><img className="" src={require('../images/assets.svg')} />FFE</li>
                                 <li className={this.state.mactive == 'supplier' ? 'active' : ''} onClick={() => this.selectMenu('supplier')}><img className="" src={require('../images/vendors.svg')} />SUPPLIER</li>
-                                <li><img className="" src={require('../images/users.svg')} />USERS</li>
+                                <li className={this.state.mactive == 'users' ? 'active' : ''} onClick={() => this.selectMenu('users')}><img className="" src={require('../images/users.svg')} />USERS</li>
                             </ul>                            
                         </div>
                    </div>
@@ -169,8 +171,14 @@ class Dashboard extends Component {
                         <CreateFFE/>                       
                    }
                    {this.state.mactive == 'supplier' && 
-                        <Supplier/>   
+                        <Supplier handleChangeState={this.handleChangeState} />   
                         // <Loader />                   
+                   }
+                   {this.state.mactive == 'addSupplier' && 
+                        <AddSupplier/>                       
+                   }
+                   {this.state.mactive == 'users' && 
+                        <Users/>                       
                    }
                    </div>
                </div>               
