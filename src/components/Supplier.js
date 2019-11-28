@@ -13,7 +13,7 @@ class Supplier extends Component {
         return (
             <React.Fragment>
               <div className="work_area_dashboard">
-                       <div className="header_area">  <img className="" src={require('../images/market-store.svg')} /> Supplier</div>
+                       <div className="header_area">  <img className="" src={require('../images/market-store.svg')} /> Service Providers & Suppliers</div>
                        <div className="card_main">                       
                         <Card>
                             <CardBody>

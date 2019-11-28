@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Row, Col, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import helperSvg from "../images/helperSvg";
 import { Link } from 'react-router-dom';
+import Select from 'react-select';
+import { userOptions } from '../data/data';
 
 class CreateTicket extends Component {
     constructor(props) {
@@ -59,29 +61,29 @@ class CreateTicket extends Component {
 
                     <div className="form_wrapper m-t-25">
                         <Row>
-                            <Col sm={6} md={6} lg={4} xs={12}>
+                            <Col sm={12}>
                                 <FormGroup >
-                                    <Label className="m-b-10" for="exampleEmail">Title</Label>
-                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Ticket Summary" />
+                                    <Label className="m-b-10" for="exampleEmail">Brief Description</Label>
+                                    <Input type="email" name="email" id="exampleEmail" placeholder="Example: Walk-in Cooler is not working" />
                                 </FormGroup>
                             </Col>
-                            <Col sm={6} md={6} lg={4} xs={12}>
+                            <Col sm={9}>
                                 <FormGroup>
-                                    <Label for="exampleSelect">FFE (Furn., Fixtures and Equip.)</Label>
+                                    <Label for="exampleSelect">FF&E (Furn., Fixtures and Equip.)</Label>
                                     <Input type="select" name="select" id="exampleSelect">
                                         <option>Select FFE</option>
                                     </Input>
                                 </FormGroup>
                             </Col>
-                            <Col sm={6} md={6} lg={4} xs={12} className="d_link">
+                            <Col sm={3} className="d_link">
                                 <Button className="button_link m-t-29 mobile-m"> 
                                 <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d={M16} fill={styles.svg.fillcolor} />
                                 </svg>
                                 {/* <img className="m-r-10" src={require('../images/plus.svg')} /> */}
-                                <Link to="/asset"> ADD NEW FFE </Link></Button>
+                                <Link to="/asset"> ADD NEW FF&E </Link></Button>
                             </Col>
-                            <Col sm={6} md={6} lg={4} xs={12}>
+                            <Col sm={4}>
                                 <FormGroup>
                                     <Label for="exampleSelect">Type</Label>
                                     <Input type="select" name="select" id="exampleSelect">
@@ -89,15 +91,23 @@ class CreateTicket extends Component {
                                     </Input>
                                 </FormGroup>
                             </Col>
-                            {/* <Col sm={4}>
+                            <Col sm={4}>
+                                <FormGroup>
+                                    <Label for="exampleSelect">Priority</Label>
+                                    <Input type="select" name="select" id="exampleSelect">
+                                        <option>Emergency</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                            <Col sm={4}>
                                 <FormGroup>
                                     <Label for="exampleSelect">Category</Label>
                                     <Input type="select" name="select" id="exampleSelect">
                                         <option>Plumbing</option>
                                     </Input>
                                 </FormGroup>
-                            </Col> */}
-                            <Col sm={6} md={6} lg={4} xs={12}>
+                            </Col>
+                            {/* <Col sm={6} md={6} lg={4} xs={12}>
                                 <FormGroup>
                                     <Label for="exampleSelect">Supplier</Label>
                                     <Input type="select" name="select" id="exampleSelect">
@@ -109,16 +119,71 @@ class CreateTicket extends Component {
                                 <Button className="button_link m-t-29 mobile-m"> <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d={M16} fill={styles.svg.fillcolor} />
                                 </svg> <Link to="/vendor">ADD NEW SUPPLIER </Link></Button>
+                            </Col> */}     
+                        </Row>
+                    </div>
+
+
+                    <div className="header_area m-t-25">  <img className="" src={require('../images/invoice.svg')} /> Invoice </div>
+                    <div className="form_wrapper m-t-25">
+                        <Row>
+                        <Col sm={4}>
+                        <FormGroup >
+                            <Label className="m-b-10" for="exampleEmail">Invoice Number</Label>
+                            <Input type="email" name="email" id="exampleEmail" placeholder="CH3534894984709721" />
+                        </FormGroup>
                             </Col>
-                            <Col sm={6} md={6} lg={4} xs={12}>
-                                <FormGroup>
-                                    <Label for="exampleSelect">Priority</Label>
+                            <Col sm={4}>
+                        <FormGroup >
+                            <Label className="m-b-10" for="exampleEmail">Invoice Received At</Label>
+                            <Input type="date" name="email" id="exampleEmail" placeholder="CH3534894984709721" />
+                        </FormGroup>
+                            </Col>
+                            <Col sm={4}>
+                            <FormGroup>
+                                <Label for="exampleSelect">Invoice Status</Label>
                                     <Input type="select" name="select" id="exampleSelect">
-                                        <option>Emergency</option>
+                                    <option>Created </option>
                                     </Input>
+                            </FormGroup>
+                            </Col>
+                        </Row>
+                    </div>
+
+
+                    <div className="header_area m-t-25">  <img className="" src={require('../images/hastag.svg')} /> Description</div>
+                    <div className="form_wrapper m-t-25">
+                        <Row>
+                            <Col sm={12}>
+                                <FormGroup className="m-b-0">
+                                    <Input className="custom_txtarea" type="textarea" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." name="text" id="exampleText" />
                                 </FormGroup>
                             </Col>
-                            <Col sm={6} md={6} lg={4} xs={12}>
+                            <hr/>
+                            <Col sm={4}>
+                                                <FormGroup>
+                                                    <Label for="exampleSelect">Type (Internal or External)</Label>
+                                                        <Input type="select" name="select" id="exampleSelect">
+                                                        <option>External - for a Service Provider or Sup.</option>
+                                                        </Input>
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={4}>
+                                                <Select
+                                                    defaultValue={[userOptions[1], userOptions[2]]}
+                                                    isMulti
+                                                    name="colors"
+                                                    options={userOptions}
+                                                    className="basic-multi-select m-t-28"
+                                                    classNamePrefix="select"
+                                                />
+                                            </Col>
+                                            <Col sm={4} className="mobile_link">
+                                                <Button className="button_link m-t-29 mobile-m w-auto"> <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d={M16} fill={styles.svg.fillcolor} />
+                                                </svg> <Link to="/vendor">ADD NEW SUPPLIER OR SERVICE PROVIDER </Link></Button>
+                                            </Col>
+                                            <Col sm={6} md={6} lg={4} xs={12}>
                                 <FormGroup>
                                     <Label for="exampleSelect">Timetable</Label>
                                     <Input type="select" name="select" id="exampleSelect">
@@ -151,16 +216,6 @@ class CreateTicket extends Component {
                                         </FormGroup>
                                     </Col>
                                 </Row>
-                            </Col>
-                        </Row>
-                    </div>
-                    <div className="header_area m-t-25">  <img className="" src={require('../images/hastag.svg')} /> Description</div>
-                    <div className="form_wrapper m-t-25">
-                        <Row>
-                            <Col sm={12}>
-                                <FormGroup className="m-b-0">
-                                    <Input className="custom_txtarea" type="textarea" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." name="text" id="exampleText" />
-                                </FormGroup>
                             </Col>
                         </Row>
                     </div>

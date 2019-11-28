@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import helperSvg from "../images/helperSvg";
 
 
 class AddAsset extends Component {
@@ -13,20 +14,22 @@ class AddAsset extends Component {
     }
 
     render() {
+        const { svgPath, styles} = helperSvg;
+        const { M16 } = svgPath;
         return (
             <React.Fragment>
                 <Header />
                 <div className="work_area">
                     <div className="sub_pagetitle m-sec">
                         <div className="container m-padding p-0 ">
-                            <h6 className="sub_title p-t-30 p-b-30">Create your first FFE (Furni., Fixtures and Equip.) by entering as many details as needed to identify the item</h6>
+                            <h6 className="sub_title p-t-30 p-b-30">Create your first asset by entering as many details as needed to identify the item</h6>
                         </div>
                     </div>
                     <div className="asset_sec">
                         <div className="core_sec p-b-30">
                             <div className="container form_cover p-0">
                                 <div className="title_sec p-t-30">
-                                    <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.)</h5>
+                                    <h5 className="p-l-15">FF&E (Furniture, Fixtures & Equipment)</h5>
                                     <hr />
                                 </div>
                                 <Form>
@@ -35,7 +38,7 @@ class AddAsset extends Component {
                                             <Col sm={12}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Name</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter FFE Name" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Example: Walk-in Cooler" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
@@ -49,13 +52,13 @@ class AddAsset extends Component {
                                             <Col sm={6}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Location</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Location, ie kitchen or bar" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Example: kitchen or bar" />
                                                 </FormGroup>
                                             </Col>
                                         </Row>
                                     </div>
                                     <div className="title_sec p-t-30">
-                                        <h5 className="p-l-15">FFE (Furni., Fixtures and Equip.) Details <span className="txt_optional">(Optional)</span></h5>
+                                        <h5 className="p-l-15">FF&E (Furniture, Fixtures & Equipment) Details <span className="txt_optional">(Optional)</span></h5>
                                         <hr />
                                     </div>
                                     <div className="container bg_white">
@@ -74,8 +77,14 @@ class AddAsset extends Component {
                                             </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Model Number</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Model Number" />
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={6}>
+                                                <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Year</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Year" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="YYYY" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
@@ -84,6 +93,13 @@ class AddAsset extends Component {
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Serial Number" />
                                                 </FormGroup>
                                             </Col>
+                                            <Col sm={6} className="upload_btn mobile_link">
+                                            <Button className="button_link mobile-b-10 m-t-30">  <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d={M16} fill={styles.svg.fillcolor} />
+                                                </svg> ADD PHOTO OF PLATE 
+                                                <input type="file" />
+                                            </Button> 
+                                        </Col>
                                         </Row>
                                     </div>
                                     <div className="title_sec p-t-30">
@@ -92,22 +108,28 @@ class AddAsset extends Component {
                                     </div>
                                     <div className="container bg_white">
                                         <Row>
-                                            <Col sm={6}>
+                                            <Col sm={4}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Purchased Form</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Purchased Form" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Example:Restaurant Depot" />
                                                 </FormGroup>
                                             </Col>
-                                            <Col sm={6}>
+                                            <Col sm={4}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Purchase Price</Label>
                                                     <Input type="email" name="email" id="exampleEmail" placeholder="Enter Price" />
                                                 </FormGroup>
                                             </Col>
+                                            <Col sm={4}>
+                                                <FormGroup >
+                                                    <Label className="m-b-10" for="exampleEmail">Website</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Supplier Website Address" />
+                                                </FormGroup>
+                                            </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Purchased Date</Label>
-                                                    <Input type="date" name="email" id="exampleEmail" placeholder="Select Date" />
+                                                    <Input type="date" name="email" id="exampleEmail" placeholder="MM/DD/YYYY" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
@@ -119,14 +141,14 @@ class AddAsset extends Component {
                                             <Col sm={4}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">City</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Your City" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter City" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
                                                     <Label for="exampleSelect">State</Label>
                                                     <Input type="select" name="select" id="exampleSelect">
-                                                        <option>Enter State</option>
+                                                        <option>Select State</option>
                                                     </Input>
                                                 </FormGroup>
                                             </Col>
@@ -143,10 +165,10 @@ class AddAsset extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
-                                                <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Phone" />
-                                                </FormGroup>
+                                            <FormGroup >
+                                                <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                                <Input type="email" name="email" id="exampleEmail" placeholder="Example:(541) 754-3010" />
+                                            </FormGroup>
                                             </Col>
                                         </Row>
                                     </div>
@@ -159,13 +181,13 @@ class AddAsset extends Component {
                                             <Col sm={6}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Name</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Vendor Name" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Example:Metro Refrigeration Services" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
                                                     <Label className="m-b-10" for="exampleEmail">Website</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Vendor Website" />
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Service Provider Website Address" />
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
@@ -176,9 +198,9 @@ class AddAsset extends Component {
                                             </Col>
                                             <Col sm={6}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Phone" />
-                                                </FormGroup>
+                                                        <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Example:(541) 754-3010" />
+                                                    </FormGroup>
                                             </Col>
                                             <Col sm={12}>
                                                 <div className="text-center m-t-40 m-b-40">

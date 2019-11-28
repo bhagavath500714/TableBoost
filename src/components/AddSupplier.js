@@ -22,18 +22,22 @@ class AddSupplier extends Component {
                     <div className="form_wrapper m-t-25">
                         <Row>
                         <Col sm={6} md={6} lg={4} xs={12}>
-                            <Row>
+                            <Row className="p-l-10 p-t-35">
                                 <Col sm={4}>
-                                    <FormGroup check className="custom_check m-t-35 mobile-m m-space p-l-0">
-                                        <Input type="checkbox" name="check" id="exampleCheck" />
-                                        <Label for="exampleCheck" check>Supplier</Label>
-                                    </FormGroup>
+                                <FormGroup check>
+                                            <Label check>
+                                            <Input className="c_radio" type="radio" name="radio2" />
+                                            Supplier
+                                            </Label>
+                                        </FormGroup>                                   
                                 </Col>
                                 <Col sm={8}>
-                                    <FormGroup check className="custom_check m-t-35 mobile-m m-space p-l-0">
-                                        <Input type="checkbox" name="check" id="exampleProvider" />
-                                        <Label for="exampleProvider" check>Service Provider</Label>
-                                    </FormGroup>
+                                <FormGroup className="m-l-20" check>
+                                            <Label check>
+                                            <Input className="c_radio" type="radio" name="radio2" defaultChecked/>
+                                            Service Provider
+                                            </Label>
+                                        </FormGroup>
                                 </Col> 
                             </Row>                                
                         </Col>
@@ -44,10 +48,10 @@ class AddSupplier extends Component {
                                 </FormGroup>
                             </Col>
                             <Col sm={6} md={6} lg={4} xs={12}>
-                                <FormGroup >
-                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone </Label>
-                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Number" />
-                                </FormGroup>
+                            <FormGroup >
+                                <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                <Input type="email" name="email" id="exampleEmail" placeholder="Example: (541) 754-3010" />
+                            </FormGroup>
                             </Col>
                             <Col sm={6} md={6} lg={4} xs={12}>
                                 <FormGroup >
@@ -113,10 +117,10 @@ class AddSupplier extends Component {
                                 </FormGroup>
                             </Col>
                             <Col sm={6} md={6} lg={4} xs={12}>
-                                <FormGroup >
-                                    <Label className="m-b-10" for="exampleEmail">Mobile Phone </Label>
-                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Number" />
-                                </FormGroup>
+                            <FormGroup >
+                                <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                <Input type="email" name="email" id="exampleEmail" placeholder="Example: (541) 754-3010" />
+                            </FormGroup>
                             </Col>                                                        
                         </Row>
                     </div>                   

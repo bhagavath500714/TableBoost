@@ -3,6 +3,8 @@ import { Button, Form, FormGroup, Label, Input, Row, Col} from 'reactstrap';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 import helperSvg from "../images/helperSvg";
+import Select from 'react-select';
+import { userOptions } from '../data/data';
 
 class SignUp extends Component {
     constructor(props) {
@@ -35,7 +37,7 @@ class SignUp extends Component {
                                         <h6 className="steper_title m-t-15">Add Managers and Employees who will be responsible for repair and maintenance tasks</h6>
                                     }
                                     {this.state.viewSteper == '3' && 
-                                        <h6 className="steper_title m-t-15">Create your first ticket by adding an FFE (fryer, espresso machine…) and assigning that ticket to a crew member  or a vendor or supplier</h6>
+                                        <h6 className="steper_title m-t-15">Create your first ticket by adding an FF&E (Furniture, Fixtures & Equipment) and assigning that ticket to a crew member  or a vendor or supplier</h6>
                                     }
                                     {this.state.viewSteper == '4' && 
                                         <h6 className="steper_title m-t-15">Almost finished!</h6>
@@ -50,7 +52,7 @@ class SignUp extends Component {
                                         <li>
                                             <div className="count_box">
                                                 <span className={"count " + (this.state.viewSteper == '2' ? 'active' : '')} onClick={() => this.stepperView('2')}>2</span>
-                                                <small className="small_txt m-t-5">Add User</small>
+                                                <small className="small_txt m-t-5">Add Users</small>
                                             </div>
                                         </li>
                                         <li>
@@ -102,7 +104,7 @@ class SignUp extends Component {
                                                 <FormGroup>
                                                     <Label for="exampleSelect">State <sup className="sub_txt">*</sup></Label>
                                                         <Input type="select" name="select" id="exampleSelect">
-                                                        <option>Enter State</option>
+                                                        <option>Select State</option>
                                                         </Input>
                                                 </FormGroup>
                                                 </Col>
@@ -114,8 +116,8 @@ class SignUp extends Component {
                                                 </Col>
                                                 <Col sm={4}>
                                                     <FormGroup >
-                                                        <Label className="m-b-10" for="exampleEmail">Phone</Label>
-                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Enter Restaurant Main Phone" />
+                                                        <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Example: (541) 754-3010" />
                                                     </FormGroup>
                                                 </Col>
                                                 <Col sm={8}>
@@ -161,10 +163,10 @@ class SignUp extends Component {
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={6}>
-                                                <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Cell Phone</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter Cell Phone Number" />
-                                                </FormGroup>
+                                            <FormGroup >
+                                                        <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                                        <Input type="email" name="email" id="exampleEmail" placeholder="Example: (541) 754-3010" />
+                                                    </FormGroup>
                                             </Col>
                                             <Col sm={6}>
                                                     <FormGroup>
@@ -221,10 +223,10 @@ class SignUp extends Component {
                                        </FormGroup>
                                    </Col>
                                    <Col sm={6}>
-                                       <FormGroup >
-                                           <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
-                                           <Input type="email" name="email" id="exampleEmail" placeholder="Enter Mobile Number" />
-                                       </FormGroup>
+                                   <FormGroup >
+                                        <Label className="m-b-10" for="exampleEmail">Mobile Phone</Label>
+                                        <Input type="email" name="email" id="exampleEmail" placeholder="Example: (541) 754-3010" />
+                                    </FormGroup>
                                    </Col>
                                    <Col sm={6}>
                                            <FormGroup>
@@ -273,15 +275,39 @@ class SignUp extends Component {
                                         <Row>
                                             <Col sm={12}>
                                                 <FormGroup >
-                                                    <Label className="m-b-10" for="exampleEmail">Title</Label>
-                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Enter ticket summary" />
+                                                    <Label className="m-b-10" for="exampleEmail">Brief Description</Label>
+                                                    <Input type="email" name="email" id="exampleEmail" placeholder="Example: Walk-in Cooler is not working" />
                                                 </FormGroup>
+                                            </Col>
+                                            <Col sm={8}>
+                                                <FormGroup>
+                                                    <Label for="exampleSelect">FF&E (Furniture, Fixtures & Equipment) </Label>
+                                                        <Input type="select" name="select" id="exampleSelect">
+                                                        <option>Select FF&E</option>
+                                                        </Input>
+                                                </FormGroup>
+                                            </Col>
+                                            <Col sm={4} className="mobile_link">
+                                                <Button className="button_link m-t-29 mobile-m"> 
+                                                <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d={M16} fill={styles.svg.fillcolor} />
+                                                </svg>
+                                                {/* <img className="m-r-10" src={require('../images/plus.svg')} /> */}
+                                                <Link to="/asset"> ADD NEW FF&E </Link></Button>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
                                                     <Label for="exampleSelect">Type</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>Repair</option>
+                                                        </Input>
+                                                </FormGroup>
+                                            </Col>                                            
+                                            <Col sm={4}>
+                                                <FormGroup>
+                                                    <Label for="exampleSelect">Priority</Label>
+                                                        <Input type="select" name="select" id="exampleSelect">
+                                                        <option>Emergency</option>
                                                         </Input>
                                                 </FormGroup>
                                             </Col>
@@ -292,57 +318,41 @@ class SignUp extends Component {
                                                         <option>Plumbing</option>
                                                         </Input>
                                                 </FormGroup>
-                                            </Col>
-                                            <Col sm={4}>
-                                                <FormGroup>
-                                                    <Label for="exampleSelect">Priority</Label>
-                                                        <Input type="select" name="select" id="exampleSelect">
-                                                        <option>Emergency</option>
-                                                        </Input>
-                                                </FormGroup>
-                                            </Col>
-                                            <Col sm={8}>
-                                                <FormGroup>
-                                                    <Label for="exampleSelect">FFE (Furni., Fixtures and Equip.) </Label>
-                                                        <Input type="select" name="select" id="exampleSelect">
-                                                        <option>Select FFE</option>
-                                                        </Input>
-                                                </FormGroup>
-                                            </Col>
-                                            <Col sm={4} className="mobile_link">
-                                                <Button className="button_link m-t-29 mobile-m"> 
-                                                <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d={M16} fill={styles.svg.fillcolor} />
-                                                </svg>
-                                                {/* <img className="m-r-10" src={require('../images/plus.svg')} /> */}
-                                                <Link to="/asset"> ADD NEW FFE </Link></Button>
-                                            </Col>
+                                            </Col>                                            
                                             <Col sm={12}>
                                             <FormGroup>
-                                                <Label for="exampleText">Description</Label>
+                                                <Label for="exampleText">Details</Label>
                                                 <Input type="textarea" name="text" id="exampleText" placeholder="Ticket Description"/>
                                             </FormGroup>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
-                                                    <Label for="exampleSelect">Assign Type</Label>
+                                                    <Label for="exampleSelect">Type (Internal or External)</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
-                                                        <option>External</option>
+                                                        <option>External - for a Service Provider or Sup.</option>
                                                         </Input>
                                                 </FormGroup>
                                             </Col>
                                             <Col sm={4}>
-                                                <FormGroup>
+                                                {/* <FormGroup>
                                                     <Label for="exampleSelect">Assign To</Label>
                                                         <Input type="select" name="select" id="exampleSelect">
                                                         <option>Select</option>                                                        
                                                         </Input>
-                                                </FormGroup>
+                                                </FormGroup> */}
+                                                <Select
+                                                    defaultValue={[userOptions[1], userOptions[2]]}
+                                                    isMulti
+                                                    name="colors"
+                                                    options={userOptions}
+                                                    className="basic-multi-select m-t-28"
+                                                    classNamePrefix="select"
+                                                />
                                             </Col>
                                             <Col sm={4} className="mobile_link">
-                                                <Button className="button_link m-t-29 mobile-m"> <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <Button className="button_link m-t-29 mobile-m w-auto"> <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d={M16} fill={styles.svg.fillcolor} />
-                                                </svg> <Link to="/vendor">ADD NEW VENDOR </Link></Button>
+                                                </svg> <Link to="/vendor">ADD NEW SUPPLIER OR SERVICE PROVIDER </Link></Button>
                                             </Col>
                                             <Col sm={4}>
                                                 <FormGroup>
@@ -426,7 +436,7 @@ class SignUp extends Component {
                                                             <Col sm={12}>
                                                                 <div className="complete_box text-center">
                                                                     <img className="complete_logo m-b-40" src={require('../images/complete_logo.svg')} />
-                                                                    <p>By clicking complete you agree to the TB terms and conditions listed below</p> 
+                                                                    <p>By clicking complete you agree to the TB terms of service listed below</p> 
                                                                     <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms of Service</h5>   
                                                                 </div>
                                                             </Col>

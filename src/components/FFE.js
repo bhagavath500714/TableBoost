@@ -27,7 +27,7 @@ class FFE extends Component {
             <React.Fragment>
                 <div className="work_area_dashboard ffe_sec">
                     <div className="detail-header m-t-40">
-                        <div className="header_area m-0">  <img className="" src={require('../images/FFE-black.svg')} /> FFE (Furn., Fixtures and Equip.)</div>
+                        <div className="header_area m-0">  <img className="" src={require('../images/FFE-black.svg')} /> FF&E (Furniture, Fixtures & Equipment)</div>
                         <div className="tool-sec">
                             <Button className="button_link m-r-10 mobile-m">
                                 <svg className="m-r-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@ class FFE extends Component {
                         </Card>
                         <div className="add_con" onClick={() => this.props.handleChangeState('createFFE')}>
                             <img className="" src={require('../images/add.svg')} />
-                            <h3>Add New FFE</h3>
+                            <h3>Add New FF&E</h3>
                         </div>
                     </div>
                     }

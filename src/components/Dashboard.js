@@ -12,7 +12,8 @@ import FFE from './FFE';
 import CreateFFE from './CreateFFE';
 import Supplier from './Supplier';
 import AddSupplier from './AddSupplier';
-import Users from './Users'
+import Users from './Users';
+import AddUser from './AddUser';
 import Loader from './Loader';
 
 const mql = window.matchMedia(`(min-width: 767px)`);
@@ -76,8 +77,8 @@ class Dashboard extends Component {
                             <ul>
                                 <li className={this.state.mactive == 'dashboard' ? 'active' : ''} onClick={() => this.selectMenu('dashboard')} ><img className="" src={require('../images/dashboard.svg')} /> Dashboard</li>
                                 <li className={this.state.mactive == 'tickets' ? 'active' : ''} onClick={() => this.selectMenu('tickets')}><img className="" src={require('../images/tickets.svg')} />Tickets</li>
-                                <li className={this.state.mactive == 'FFE' ? 'active' : ''} onClick={() => this.selectMenu('FFE')}><img className="" src={require('../images/assets.svg')} />FFE</li>
-                                <li className={this.state.mactive == 'supplier' ? 'active' : ''} onClick={() => this.selectMenu('supplier')}><img className="" src={require('../images/vendors.svg')} />SUPPLIER</li>
+                                <li className={this.state.mactive == 'FFE' ? 'active' : ''} onClick={() => this.selectMenu('FFE')}><img className="" src={require('../images/assets.svg')} />FF&E</li>
+                                <li className={this.state.mactive == 'supplier' ? 'active' : ''} onClick={() => this.selectMenu('supplier')}><img className="" src={require('../images/vendors.svg')} />SERVICE PROVIDER & SUPPLIERS</li>
                                 <li className={this.state.mactive == 'users' ? 'active' : ''} onClick={() => this.selectMenu('users')}><img className="" src={require('../images/users.svg')} />USERS</li>
                             </ul>                            
                         </div>
@@ -178,7 +179,10 @@ class Dashboard extends Component {
                         <AddSupplier/>                       
                    }
                    {this.state.mactive == 'users' && 
-                        <Users/>                       
+                        <Users handleChangeState={this.handleChangeState}/>                       
+                   }
+                    {this.state.mactive == 'addUser' && 
+                        <AddUser/>                       
                    }
                    </div>
                </div>               

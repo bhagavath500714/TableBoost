@@ -50,7 +50,7 @@ class Users extends Component {
                             </div>        
                             </CardBody>
                         </Card>
-                        <div className="add_con" onClick={() => this.props.handleChangeState('addSupplier')}>
+                        <div className="add_con" onClick={() => this.props.handleChangeState('addUser')}>
                         <img className="" src={require('../images/add.svg')} />
                         <h3>Add New User</h3>
                         </div>

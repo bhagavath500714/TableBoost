@@ -8,6 +8,14 @@
  @mixin flex-end-end {display:flex;align-items: flex-end;justify-content: flex-end;}
  @mixin flex-center-between {display:flex;align-items: center;justify-content: space-between;}
 
+ .flex{display:flex;}
+ .flex-wrap{flex-wrap: wrap;}
+ .flex-center {display:flex;align-items: center;} 
+ .flex-center-center {display:flex;align-items: center;justify-content: center;}  
+ .flex-center-end {display:flex;align-items: center;justify-content: flex-end;}
+ .flex-end-end {display:flex;align-items: flex-end;justify-content: flex-end;}
+ .flex-center-between {display:flex;align-items: center;justify-content: space-between;}
+
 .button_base{height:43px;min-width:150px;font-weight: 100 !important;}
 .btn_radius{border-radius: 21px !important;}
 .button_bordered{background: transparent !important;border:1px solid color(c_white) !important;@include flex-center-center;}
