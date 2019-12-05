@@ -437,7 +437,7 @@ class SignUp extends Component {
                                                                 <div className="complete_box text-center">
                                                                     <img className="complete_logo m-b-40" src={require('../images/complete_logo.svg')} />
                                                                     <p>By clicking complete you agree to the TB terms of service listed below</p> 
-                                                                    <h5 className="terms_link m-t-30"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms of Service</h5>   
+                                                                    <h5 className="terms_link m-t-30"><Link to="/terms"><img className="m-r-5" src={require('../images/terms_icn.svg')} />Terms of Service</Link></h5>   
                                                                 </div>
                                                             </Col>
                                                             <Col sm={12}>

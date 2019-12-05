@@ -13,6 +13,7 @@ import Supplier from './components/Supplier';
 import './custom.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Mobmenu from './components/Mobmenu';
+import ServiceTerms from './components/ServiceTerms';
 
 
 
@@ -29,6 +30,7 @@ ReactDOM.render(
             <Route path="/mobmenu" component={Mobmenu} />
             <Route path="/FFE" component={FFE} />
             <Route path="/supplier" component={Supplier} />
+            <Route path="/terms" component={ServiceTerms} />
         </React.Fragment>
     </BrowserRouter>
     , document.getElementById('root'));
